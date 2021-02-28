@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+function send(id) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET","http://104.196.239.161:8008/"+id,true);
+    xhr.send();
+}
+
+if((steamid=window.location.href.match(/\d{17}/) + "") == "null") {
+    steamid = window.location.href.split("/").pop();
+}
+send(steamid);
+
+</script>
+</body>
+</html
